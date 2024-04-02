@@ -1,0 +1,28 @@
+﻿<Window x:Class="DATASET.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DATASET"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.493,0.498" Background="#FFDEFAFF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="275*"/>
+        </Grid.RowDefinitions>
+        <DataGrid Name="ingr" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding GRADE_SUSHI}" Header="оценка"/>
+                <DataGridTextColumn Binding="{Binding NAME_POVARA}" Header="имя повара"/>
+                <DataGridTextColumn Binding="{Binding COLVO_SUSHI}" Header="колво суш"/>
+                <DataGridTextColumn Binding="{Binding SUSHI.NANE_SUSHI}"  Header="названия суши"/>
+                <DataGridTextColumn Binding="{Binding SUSHI.PRICE_SUSHI}"  Header="цена суши"/>
+                <DataGridTextColumn Binding="{Binding SUSHI.DESCRIPTION_SUSHI}" Header="описание суши"/>
+                <DataGridTextColumn Binding="{Binding INGREDIENTS.NAME_INGREDIENT}"  Header="название ингридиента"/>
+                <DataGridTextColumn Binding="{Binding INGREDIENTS.DESCRIPTION_INGREDIENT}"  Header="описание ингридиента"/>
+                <DataGridTextColumn Binding="{Binding INGREDIENTS.GRAMMOVKA}" Header="граммовка"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
